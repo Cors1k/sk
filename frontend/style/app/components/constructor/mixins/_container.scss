@@ -1,0 +1,9 @@
+@mixin containerWidth($w) {
+  max-width: $w;
+}
+
+@mixin containerSpace {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

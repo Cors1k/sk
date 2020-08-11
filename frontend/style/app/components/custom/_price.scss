@@ -1,0 +1,126 @@
+.price {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+    }
+  }
+  &__section {
+    position: relative;
+    background-color: $blue;
+    @include flexCenterAll;
+    color: $white;
+    flex-direction: column;
+    @include flexCenterAll;
+    @media (max-width:1024px) {
+      padding: 132px 20px 84px 20px;
+    }
+    @media (max-width: 768px) {
+      padding: 88px 20px 40px 20px;
+    }
+  }
+  &__title {
+    @include fontSize(56,64);
+    text-align: center;
+    padding-bottom: 68px;
+    @media (max-width: 1024px) {
+      @include fontSize(44,52);
+      padding-bottom: 76px;
+    }
+    @media (max-width: 768px) {
+      @include fontSize(38,44);
+      padding-bottom: 76px;
+    }
+  }
+  &__flag {
+    position: absolute;
+    background-color: $black;
+    top: -20px;
+    width: 110px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    color: $white;
+    text-align: center;
+    
+    @media (max-width:768px) {
+      top: 0;
+      transform: translateY(-50%);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 55px solid transparent;
+      border-right: 55px solid transparent;
+      border-top: 20px solid $black;
+      bottom: -20px;
+    }
+  }
+}
+
+.price {
+  &__full {
+    &-title {
+      opacity: .5;
+      padding-bottom: 4px;
+    }
+    &-num {
+      opacity: .5;
+      @include fontSize(38, 50);
+      padding-bottom: 8px;
+      @media (max-width: 768px) {
+        @include fontSize(36, 48);
+      }
+    }
+  }
+  &__credit {
+    &-title {
+      @include fontSize(23, 27);
+      text-align: center;
+      padding-bottom: 20px;
+      @media (max-width: 768px) {
+        @include fontSize(18, 21);
+      }
+    }
+    &-num {
+      @include fontSize(80, 106);
+      @media (max-width: 768px) {
+        @include fontSize(56, 74);
+      }
+    }
+  }
+  &__lucky {
+    &-title {
+      @include fontSize(20, 24);
+      @media (max-width: 768px) {
+        @include fontSize(15, 18);
+      }
+    }
+    &-num {
+      @include fontSize(50, 66);
+      padding-bottom: 4px;
+      @media (max-width: 768px) {
+        @include fontSize(40, 53);
+      }
+    }
+  }
+}
+
+.flag {
+  &__sale {
+    @include fontSize(14,20);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  &__num {
+    @include fontSize(30,40);
+  }
+  &__desc {
+    @include fontSize(15,20);
+    opacity: .7;
+  }
+}

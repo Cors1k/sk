@@ -1,0 +1,9 @@
+@mixin tetragon($width, $height: false) {
+  @if $height {
+    width: $width + px;
+    height: $height + px;
+  } @else {
+    width: $width + px;
+    height: $width + px;
+  }
+}

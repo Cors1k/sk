@@ -1,0 +1,27 @@
+.text {
+  &_sm {
+    @include fontSize($n12, $n16);
+  }
+  &_md {
+    @include fontSize($n16, $n24);
+  }
+  &_slg {
+    @include fontSize($n20, $n28);
+  }
+  &_lg {
+    @include fontSize($n24, $n32);
+  }
+  &_up {
+    text-transform: uppercase;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+.medium {
+  font-weight: 500;
+}
+.regular {
+  font-weight: 400;
+}

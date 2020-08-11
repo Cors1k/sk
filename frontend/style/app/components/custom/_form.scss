@@ -1,0 +1,61 @@
+.form {
+    &__def {
+      width: 100%;
+      outline: none;
+    }
+    &__input {
+      height: 60px;
+      border: 2px solid $input-border;
+      padding-left: 24px;
+      padding-right: 24px;
+      font-size: 15px;
+      &::placeholder {
+        color: $text-secondary;
+      }
+      &:hover {
+        border: 2px solid $black;
+      }
+      &:focus {
+        border: 2px solid $black;
+      }
+    }
+    &__wrapper {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__label {
+      position: relative;
+    }
+    &__checker {
+      padding-left: 39px;
+      display: block;
+      @include fontSize(14, 20);
+      color: $text-secondary;
+      cursor: pointer;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include tetragon(23);
+        border: 2px solid $input-border;
+        box-sizing: border-box;
+      }
+      & a {
+        color: $blue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+}
+
+input:checked + .form__checker::before {
+  background-color: $blue;
+  border: 2px solid $blue;
+  background-image: url(/resource/images/icons/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

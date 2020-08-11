@@ -1,0 +1,14 @@
+.section {
+  &__field {
+    padding-top: 64px;
+    padding-bottom: 88px;
+    @media (max-width:1024px) {
+      padding-top: 50px;
+      padding-bottom: 80px;
+    }
+    @media (max-width:768px) {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+  }
+}
